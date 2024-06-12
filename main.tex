@@ -1,0 +1,93 @@
+\documentclass{article}
+
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2023
+
+
+% ready for submission
+% \usepackage{neurips_2023}
+
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+    \usepackage[preprint]{neurips_2023}
+
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2023}
+
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2023}
+
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+%\donotusepackage{fullpage} --> Steinhardt says this package causes .sty problems for many ML conferences.
+
+% Taking various advice about paper-writing from people who are good at writing papers and condensing it into a template. Inspiration from: 
+  % Jennifer Widom, Stanford - https://cs.stanford.edu/people/widom/paper-writing.html
+  % Karpathy - https://karpathy.github.io/2016/09/07/phd/
+  % Jacob Steinhardt - https://bounded-regret.ghost.io/advice-for-authors/
+
+% Be ambitious with the problem. a 10x more impactful and important problem is often at most only 2-3 times harder to solve. 10x thinking forces you to think out of the box, to confront the real limitations of an approach, to think from first principles, to change the strategy completely, to innovate. Aspire to improve something by 100\% or more. - Karpathy
+
+%%% BEGIN DOCUMENT
+\title{Middle-of-the-road length title, plus a fun name that sticks in people's minds}
+\input{text/authors}
+
+\begin{document}
+\maketitle
+\addtolength{\tabcolsep}{-5pt}
+
+% beginning of paper
+\input{text/abstract}
+\input{text/intro}
+\input{text/related-work}
+
+% Main section describing model/method and core contribution
+\input{text/body}
+\input{text/experiments}
+\input{text/conclusion}
+\input{text/future_work}
+\input{text/acknowledgements}
+
+% Make all citations complete and consistent. Do not just copy random inconsistent BibTex (or other) entries from the web and call it a day. Check over the final bibliography carefully and make sure every entry looks right.
+\bibliography{anthology}
+\bibliographystyle{icml2022}
+
+\input{text/appendices}
+
+% general notes
+% - always release code. Will dramatically increase citations and make code better due to fear of public shaming from bad code
+
+% Grammar \ sentence notes
+    % - define all terminology and notation in the opening section
+    % - never say "for various reasons"
+    % - void nonreferential use of "this" e.g. 'Our experiments test several different environments and the algorithm does well in some but not all of them. This is important because'
+    % - italics are for definitions/quotes, not emphasis
+    % - use 'which' versus 'that' correctly: 'that' is defining; 'which' is nondefining
+
+% mechanics notes
+
+    % - Always run a spelling checker on your final paper, no excuses.
+    % - For drafts and technical reports use 11 point font, generous spacing, 1" margins, and single-column format. There's no need to torture your casual readers with the tiny fonts and tight spacing used in conference proceedings these days.
+    % - In drafts and final camera-ready, fonts in figures should be approximately the same font size as used for the text in the body of the paper.
+    % - Tables, figures, graphs, and algorithms should always be placed on the top of a page or column, not in the body of the text unless it is very small and fits into the flow of the paper.
+    % - Every table, figure, graph, or algorithm should appear on the same page as its first reference, or on the following page (LaTex willing...).
+    % - Before final submission or publication of your paper, print it once and take a look -- you might be quite surprised how different it looks on paper from how it looked on your screen (if you even bothered to look at it after you ran Latex the last time...).
+    
+
+\end{document}
